@@ -1,0 +1,33 @@
+package dataBaseConn;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import objects.Contacts;
+
+public class DataManager {
+	
+	private DataAccess dataAccess;
+	
+	public DataManager() {
+		System.out.println("In DataManager");
+		dataAccess = new DataAccess();
+	}
+	
+	public void insertContacts (Contacts contacts) {
+		dataAccess.insertNewContact(contacts);
+	}
+	
+	public void getContactByName(String name) {
+		dataAccess.getContactByName(name);
+	}
+	
+	public List<Contacts> getContactsName(String n) {
+		return dataAccess.byName(n);
+	}
+	
+	public List<Contacts> getContactsSurname(String n) {
+		return dataAccess.bySurname(n);
+	}
+
+}
