@@ -18,8 +18,8 @@ public class DataManager {
 		dataAccess.insertNewContact(contacts);
 	}
 	
-	public void getContactByName(String name) {
-		dataAccess.getContactByName(name);
+	public Contacts getByNameSurname(String n, String s) {
+		return dataAccess.contactByNameSurname(n, s);
 	}
 	
 	public List<Contacts> getContactsName(String n) {
